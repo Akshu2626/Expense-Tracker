@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#box1 {
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+#box1 h4 {
+    font-size: 2vw;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.dp {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50px;
+    margin-left: 50px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+#box2 {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(195, 104, 195);
+}
+
+.helps {
+    margin-top: 1vh;
+}
+
+i {
+    font-size: 28px;
+    padding: 0px 10px;
+}
+
+#menu {
+    display: none;
+}
+
+#mob {
+    display: none;
+}
+
+.deshboard,
+.Payment,
+.history,
+.accounts,
+.helps {
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media (max-width:600px) {
+    
+
+    #mob {
+        width: 100%;
+        height: 10vh;
+        background-color: lightgreen;
+        display: flex;
+    }
+
+    #box2{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #box1{
+        display: none;
+    }
+
+    nav { 
+        margin-top: 1px;   
+        width: 100%;
+        height: 10vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+    }
+
+    .item {
+        display: none;
+        gap: 5px;
+    }
+
+}

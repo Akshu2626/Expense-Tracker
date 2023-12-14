@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 13px 0px;
+}
+
+#box2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#payBox {
+    width: 70vw;
+    height: 60vh;
+    background-color: purple;
+    border-radius: 15px;
+}
+
+#payBox form {
+    padding: 20px 10vw;
+}
+
+form input {
+    width: 80%;
+    padding: 20px 30px;
+    font-size: 22px;
+}
+
+form button {
+    padding: 20px;
+    width: 80%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+
+@media (max-width:600px) {
+
+    #payBox{
+        height: 40vh;
+    }
+
+    #payBox form input {
+        width: 50vw;
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    form button {
+        padding: 20px;
+        width: 50vw;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 15px;
+    }
+
+}

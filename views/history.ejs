@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/stylepro.css">
+    <link rel="stylesheet" href="/stylesheets/history.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mob">
+        <%- include('mobNav') %>
+    </div>
+
+    <script>
+        let flag = 0;
+        const item = document.querySelector('.item');
+        let h4 = document.querySelector('h4');
+        const menu = document.querySelector('.ri-menu-3-fill');
+        let can = document.querySelector('.hai');
+        can.addEventListener('click', () => {
+            if (flag == 0) {
+                can.innerHTML = `<i class="ri-close-line"></i>`;
+                item.style.display = 'flex';
+                h4.style.opacity = 0;
+                flag = 1;
+            } else if (flag == 1) {
+                can.innerHTML = `<i class="ri-menu-3-fill"></i>`;
+                item.style.display = 'none';
+                h4.style.opacity = 1;
+                flag = 0
+            }
+        })
+
+
+    </script>
+
+
+
+    <!-- lap -->
+
+    <div id="main">
+        <div id="box1">
+            <h4>Expense</h4><br>
+            <div class="dp">
+                <i class="ri-image-add-line"></i>
+            </div><br>
+            <hr><br><br><br>
+            <%- include('lapnav') %>
+                <hr><br>
+
+
+                <div class="helps"> <i class="ri-question-line"></i> <a href="/signout">Sign out</a> </div><br>
+
+
+        </div>
+        <div id="box2">
+            <div id="history">
+                <h1>History Book</h1>
+
+
+
+                <% payment.forEach((elem)=>{ %>
+                    <div class="entry">
+                        <h4> Title : <%= elem.exname %>
+                        </h4>
+                        <h4> Amount : <%= elem.examt %>
+                        </h4>
+                        <h4>Time : <%= elem.createdAt %></h4>
+                        <div class="del"><a href="/update/<%= elem._id %>">Update</a> &nbsp;&nbsp;&nbsp; <a href="/delete/<%= elem._id %>">Delete</a></div>
+                        
+                    </div>
+                    <% }) %>
+
+                <% payment.forEach((elem)=>{ %>
+                    <div id="entryBox">
+                        <div class="entryMob">
+                            <h4> Title : <%= elem.exname %>
+                            </h4>
+                            <h4> Amount : <%= elem.examt %>
+                            </h4>
+                            <h4>Time : <%= elem.createdAt %></h4><br>
+                            <div class="del"><a href="/update/<%= elem._id %>">Update</a> &nbsp;&nbsp;&nbsp; <a href="/delete/<%= elem._id %>">Delete</a></div>
+                            
+                        </div>  
+                    </div>
+                    <% }) %>
+
+
+
+
+
+            </div>
+
+
+
+            <!-- end box 2 -->
+        </div>
+
+    </div>
+
+    <script src="/javascripts/scriptPro.js"></script>
+
+</body>
+
+</html>
